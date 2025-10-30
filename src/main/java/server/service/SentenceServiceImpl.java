@@ -2,7 +2,11 @@ package server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import server.dao.*;
+import server.dao.AdjectiveClient;
+import server.dao.ArticleClient;
+import server.dao.NounClient;
+import server.dao.SubjectClient;
+import server.dao.VerbClient;
 
 /**
  * Build a sentence by assembling randomly generated subjects, verbs, 
@@ -28,14 +32,7 @@ public class SentenceServiceImpl implements SentenceService {
     @Autowired
     NounClient nounService;
 
-	/* private WordDao verbService;
-	private WordDao subjectService;
-	private WordDao articleService;
-	private WordDao adjectiveService;
-	private WordDao nounService; */
-
-
-    /**
+	/**
      * Assemble a sentence by gathering random words of each part of speech:
      */
     public String buildSentence() {

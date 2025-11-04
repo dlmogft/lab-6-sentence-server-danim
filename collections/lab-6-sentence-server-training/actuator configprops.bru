@@ -1,0 +1,15 @@
+meta {
+  name: actuator configprops
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{url}}/actuator/configprops
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

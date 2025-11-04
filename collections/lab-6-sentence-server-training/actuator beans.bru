@@ -1,0 +1,15 @@
+meta {
+  name: actuator beans
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url}}/actuator/beans
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

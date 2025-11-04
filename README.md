@@ -14,7 +14,7 @@ The steps to used it are:
 
 # Dependencies
 
-Spring Web, Config Server, Eureka Discovery Client, Spring Boot Actuator, Spring Boot DevTools, Cloud LoadBalancer Open Feign, Resilience4J (Circuit Breaker)
+Spring Web, Config Server, Eureka Discovery Client, Spring Boot Actuator, Spring Boot DevTools, Cloud LoadBalancer Open Feign, Resilience4J (Circuit Breaker), Thymeleaf
 
 # Tips
 

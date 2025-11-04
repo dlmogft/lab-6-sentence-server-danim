@@ -1,8 +1,9 @@
 spring:
   application:
-    name: sentence
+    name: lab-6-sentence-server-danim
   config:
     import: "optional:configserver:http://localhost:8001"
+  thymeleaf.cache: false
 
 server:
   port: 8020
@@ -20,6 +21,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8010/eureka/
+  instance:
+    hostname: localhost
 
 resilience4j:
   circuitbreaker:

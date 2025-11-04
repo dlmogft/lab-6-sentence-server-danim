@@ -28,4 +28,9 @@ public class SentenceController {
 		;
 	}
 
+    @GetMapping("/")
+    public String sentence() {
+        return "sentence";
+    }
+
 }

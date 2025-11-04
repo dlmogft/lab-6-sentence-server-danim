@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "lab-6-sentence-server-training",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

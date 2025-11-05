@@ -2,6 +2,9 @@ package server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import server.domain.Word;
+
+import java.util.Optional;
 
 /**
  * Build a sentence by assembling randomly generated subjects, verbs, 
@@ -20,11 +23,11 @@ public class SentenceServiceImpl implements SentenceService {
     public String buildSentence() {
         return
                 String.format("%s %s %s %s %s.",
-                        wordService.getSubject().getString(),
-                        wordService.getVerb().getString(),
-                        wordService.getArticle().getString(),
-                        wordService.getAdjective().getString(),
-                        wordService.getNoun().getString() )
+                        Optional.ofNullable(wordService.getSubject()).map(Word::getString).orElse(null),
+                        Optional.ofNullable(wordService.getVerb()).map(Word::getString).orElse(null),
+                        Optional.ofNullable(wordService.getArticle()).map(Word::getString).orElse(null),
+                        Optional.ofNullable(wordService.getAdjective()).map(Word::getString).orElse(null),
+                        Optional.ofNullable(wordService.getNoun()).map(Word::getString).orElse(null) )
                 ;
     }
 
